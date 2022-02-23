@@ -69,21 +69,21 @@ Eff_loops = zeros(4,1);
 Eff_loops_true = zeros(4,1);
 
 temp = nonzeros(data);
-Efficiency = - temp.*log(temp); 
+Efficiency = - temp.*log2(temp); 
 Eff_loops_true(1)  = sum(Efficiency);
 Eff_loops(1)  = sum(Efficiency);
 
 
 temp = nonzeros(data1);
-Efficiency = - temp.*log(temp); 
+Efficiency = - temp.*log2(temp); 
 Eff_loops_true(2)  = sum(Efficiency);
 
 temp = nonzeros(data2);
-Efficiency = - temp.*log(temp); 
+Efficiency = - temp.*log2(temp); 
 Eff_loops_true(3)  = sum(Efficiency);
 
 temp = nonzeros(data3);
-Efficiency = - temp.*log(temp); 
+Efficiency = - temp.*log2(temp); 
 Eff_loops_true(4)  = sum(Efficiency);
 
 
@@ -100,7 +100,7 @@ for alpha_index = 1:length(alpha_array)
         
         new_data = (data.^2 + (1-alpha) * data.*(1-data))/total;
         temp = nonzeros(new_data);
-        Efficiency = - temp.*log(temp); 
+        Efficiency = - temp.*log2(temp); 
         Eff_loops(cycle)  = sum(Efficiency);
         data = new_data;
     end
@@ -125,7 +125,7 @@ for cycle =2:4
     
     new_data = (data.^2 + (1-alpha) * data.*(1-data))/total;
     temp = nonzeros(new_data);
-    Efficiency = - temp.*log(temp); 
+    Efficiency = - temp.*log2(temp); 
     Eff_loops(cycle)  = sum(Efficiency);
     data = new_data;
 end
