@@ -2,6 +2,7 @@ function Heatmap_plot_code
 clear all
 
 num_loops = 50;
+alpha = 0.9994;
 
 N_array = int32(linspace(100,300000,100)); 
 top_p = zeros(length(N_array),num_loops);
@@ -32,7 +33,6 @@ data = data./sum(data);
 % Fourth 20% random integers between (10, 50)
 % All the rest random integers between (1, 10)
 
-alpha = 0.9994;
 [val, target_index1] = max(data);
 
 top_p(index, 1) = data(target_index1);
