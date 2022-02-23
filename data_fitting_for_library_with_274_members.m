@@ -33,8 +33,8 @@ saveas(gcf,file_out2)
 [val, idx] = min(error_array);
 
 alpha = alpha_array(idx);
-total = sum(data.^2) + alpha * sum(data.*(1-data));
-new_data = (data.^2 + alpha*data.*(1-data))/total;
+total = sum(data.^2) + (1-alpha) * sum(data.*(1-data));
+new_data = (data.^2 + (1-alpha)*data.*(1-data))/total;
 
 fprintf('The optimal value of alpha is: %f\n', alpha)
 
