@@ -4,7 +4,7 @@ This repository provides the code for fitting the parameter value, and predictin
 
 In specific, 
 
-decodeing NGS.py and Code assignment.py are python code which extracts DNA sequence copy numbers from raw data.
+decodeing NGS.py and Code assignment.py are python code which extracts DNA sequence count from raw data.
 
 data_fitting_XXX.m calculates the optimal value for the model parameter. 
 
