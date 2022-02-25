@@ -1,6 +1,6 @@
 # Biased-Competition-NADEL
 
-This repository provides the code for fitting the parameter value, and predicting biological/physical quantity evolutions in the model for the non-linear manipulation and analysis of large DNA datasets (we will provide the link for the paper later on). 
+This repository provides the code for fitting the parameter value, and predicting biological/physical quantity evolutions for the non-linear manipulation and analysis of large DNA datasets (we will provide the link for the paper later on). 
 
 In specific, 
 
