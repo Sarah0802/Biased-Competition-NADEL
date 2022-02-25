@@ -1,8 +1,19 @@
 function Heatmap_plot_code
 clear all
 
-num_loops = 50;
-alpha = 0.9994;
+num_loops = 1000; %50;
+alpha = 0.76; %0.9994;
+
+temp_indexy = linspace(0,1000,101);
+
+temp_indexy(1) = 1;
+
+% temp_indexy(2)
+% 
+% temp_indexy(26)
+% 
+% temp_indexy(51)
+
 
 N_array = int32(linspace(100,300000,100)); 
 top_p = zeros(length(N_array),num_loops);
@@ -60,12 +71,17 @@ end
 
 end
 
+figure(3)
+top_p(1:100,1000)
+
+
 figure(1)
-h = pcolor(top_p);
+
+h = pcolor(top_p(1:100,temp_indexy(1:101)));
 set(h, 'EdgeColor', 'none');
 
 xticks([1 25 50 75 100])
-xticklabels({'1', '25', '50', '75', '100'})
+xticklabels({'1', '250', '500', '750', '1000'})
 
 yticks([1 25 50 75 100])
 yticklabels({'100', '72803', '148535', '224268', '300000'})
@@ -80,12 +96,12 @@ saveas(gcf,file_out2)
 
 figure(2)
 
-h = pcolor(Eff_loops);
+h = pcolor(Eff_loops(1:100,temp_indexy(1:101)));
 set(h, 'EdgeColor', 'none');
 ylabel('Library size')
 xlabel('Cycles')
 xticks([1 25 50 75 100])
-xticklabels({'1', '25', '50', '75', '100'})
+xticklabels({'1', '250', '500', '750', '1000'})
 
 yticks([1 25 50 75 100])
 yticklabels({'100', '72803', '148535', '224268', '300000'})
