@@ -2,7 +2,7 @@ function data_fitting_for_library_with_274_members
 clear all
 
 % upload data
-[P0_count, P1_count, P2_count, P3_count] = data_200_library;
+[P0_count, P1_count, P2_count, P3_count] = data_274_library;
  
 % calculate the probability from the raw data
 data = P0_count./sum(P0_count);

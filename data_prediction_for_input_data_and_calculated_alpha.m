@@ -16,7 +16,7 @@ data = data./sum(data);
 % total_count(1) = sum(data);
 % total_category(1)=nnz(data);
 % N_num = 1000;
-% [P0_count, P1_count, P2_count, P3_count] = data_200_library;
+% [P0_count, P1_count, P2_count, P3_count] = data_274_library;
 % data = P0_count./sum(P0_count);
 % N_num = length(P0_count);
 
